@@ -44,7 +44,7 @@ static Key keys_en[KEYS] = {
         { "123", XK_Mode_switch, 1 },
         { "Ctrl", XK_Control_L, 1 },
         { "Alt", XK_Alt_L, 1 },
-        { "Alt", XK_Alt_L, 1 },
+        { "Mta", XK_Meta_L, 1 },
         { "", XK_space, 3 },
         { ",<", XK_comma, 1 },
         { ".>", XK_period, 1 },
