@@ -15,7 +15,7 @@ static Key keys_en[KEYS] = {
 
         { 0 }, /* New row */
 
-        { "'\"", XK_apostrophe, 1 },
+        { "Tab", XK_Tab, 1 },
         { 0, XK_a, 1 },
         { 0, XK_s, 1 },
         { 0, XK_d, 1 },
@@ -29,7 +29,7 @@ static Key keys_en[KEYS] = {
 
         { 0 }, /* New row */
 
-        { "123", XK_Mode_switch, 1 },
+        { "Shft", XK_Shift_L, 1 },
         { 0, XK_z, 1 },
         { 0, XK_x, 1 },
         { 0, XK_c, 1 },
@@ -37,17 +37,17 @@ static Key keys_en[KEYS] = {
         { 0, XK_b, 1 },
         { 0, XK_n, 1 },
         { 0, XK_m, 1 },
-        { "Tab", XK_Tab, 1 },
+        { "'\"", XK_apostrophe, 1 },
         { "⌫Bksp", XK_BackSpace, 2 },
 
         { 0 }, /* New row */
-        { "↺", XK_Cancel, 1},
-        { "Shift", XK_Shift_L, 2 },
+        { "123", XK_Mode_switch, 1 },
         { "Ctrl", XK_Control_L, 1 },
         { "Alt", XK_Alt_L, 1 },
-        { "", XK_space, 2 },
-        { "↓", XK_Down, 1 },
-        { "↑", XK_Up, 1 },
+        { "Alt", XK_Alt_L, 1 },
+        { "", XK_space, 3 },
+        { ",<", XK_comma, 1 },
+        { ".>", XK_period, 1 },
         { "↲ Enter", XK_Return, 2 },
 };
 
@@ -308,7 +308,6 @@ static Key overlay[OVERLAYS] = {
 
 
 static Key keys_symbols[KEYS] = {
-  { "Esc", XK_Escape, 1 },
   { "1!", XK_1, 1 },
   { "2@", XK_2, 1 },
   { "3#", XK_3, 1 },
@@ -319,42 +318,41 @@ static Key keys_symbols[KEYS] = {
   { "8*", XK_8, 1 },
   { "9(", XK_9, 1 },
   { "0)", XK_0, 1 },
+  { "=+", XK_plus, 1 },
 
   { 0 }, /* New row */
 
-  { "'\"", XK_apostrophe, 1 },
   { "`~", XK_grave, 1 },
-  { "-_", XK_minus, 1 },
-  { "=+", XK_plus, 1 },
-  { "[{", XK_bracketleft, 1 },
-  { "]}", XK_bracketright, 1 },
+  { "⇤", XK_Home, 1 },
+  { "↑", XK_Up, 1 },
+  { "⇥", XK_End, 1 },
   { ",<", XK_comma, 1 },
   { ".>", XK_period, 1 },
-  { "/?", XK_slash, 1 },
+  { "-_", XK_minus, 1 },
   { "\\|", XK_backslash, 1 },
   { ";:", XK_colon, 1 },
+  { "Del", XK_Delete, 1 },
 
   { 0 }, /* New row */
 
-  { "abc", XK_Mode_switch, 1 },
-  { "☺", 0x101f642, 1 },
-  { "⇤", XK_Home, 1 },
+  { "Shift", XK_Shift_L, 1 },
   { "←", XK_Left, 1 },
+  { "↓", XK_Down, 1 },
   { "→", XK_Right, 1 },
-  { "⇥", XK_End, 1 },
-  { "⇊", XK_Next, 1 },
+  { "[{", XK_bracketleft, 1 },
+  { "]}", XK_bracketright, 1 },
   { "⇈", XK_Prior, 1 },
-  { "Tab", XK_Tab, 1 },
+  { "/?", XK_slash, 1 },
   { "⌫Bksp", XK_BackSpace, 2 },
 
   { 0 }, /* New row */
-  { "↺", XK_Cancel, 1},
-  { "Shift", XK_Shift_L, 2 },
+  { "abc", XK_Mode_switch, 1 },
   { "Ctrl", XK_Control_L, 1 },
   { "Alt", XK_Alt_L, 1 },
+  { "↺", XK_Cancel, 1},
   { "", XK_space, 2 },
-  { "↓", XK_Down, 1 },
-  { "↑", XK_Up, 1 },
+  { "⇊", XK_Next, 1 },
+  { "☺", 0x101f642, 1 },
   { "↲ Enter", XK_Return, 2 },
 };
 
@@ -494,13 +492,13 @@ static Key keys_dialer[KEYS] = {
         { 0 }, /* Last item (double 0) */
 };
 
-#define LAYERS 5
+#define LAYERS 4
 static char* layer_names[LAYERS] = {
     "en",
     "symbols",
     "functions",
     "dialer",
-    "ru",
+    //"ru",
 };
 
 static Key* available_layers[LAYERS] = {
@@ -508,7 +506,7 @@ static Key* available_layers[LAYERS] = {
     keys_symbols,
     keys_functions,
     keys_dialer,
-    keys_ru
+    //keys_ru
 };
 
 
